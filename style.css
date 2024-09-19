@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik+Broken+Fax&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root {
+    --crl-main: #4b0404;
+    --crl-main-light:#681d1d;
+    --crl-white: #f3f3f3;
+    --crl-grey: #cccccc;
+    --crl-red: rgb(95, 18, 18);
+    --clr-main-light-doble:#e9e5f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--crl-main);
+}
+
+aside{
+    padding: 2rem;
+    padding-right: 0;
+    color:var(--crl-white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    gap: 7rem;
+    flex-direction: column;
+}
+
+.logo{
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.boton-menu{
+    background-color: transparent;
+    border: 0;
+    color: var(--crl-white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    padding: 1.3rem;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.boton-menu:hover{
+    background-color: var(--crl-main-light);
+    transition: .3s;
+}
+
+.boton-menu.active{
+    background-color: var(--clr-main-light-doble);
+    color: var(--crl-main);
+    width: 100%;
+    border-top-left-radius:1rem ;
+    border-bottom-left-radius:1rem ;
+    position: relative;
+}
+
+.boton-menu.active::After{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top:100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius:0.5rem ;
+    box-shadow: 0 -1rem 0 var(--clr-main-light-doble);
+}
+
+.boton-menu.active::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom:100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius:1rem ;
+    box-shadow: 0 1rem 0 var(--clr-main-light-doble);
+}
+
+.bi-hand-index-thumb-fill{
+    transform: rotateZ(90deg);
+}
+.bi-hand-index-thumb {
+    transform: rotateZ(90deg);
+}
+
+.texto-footer{
+    color: var(--crl-main-light);
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: 0;
+    text-shadow: -6px 3px 1px white;
+}
+
+.footer{
+    height: 100%;
+    position: relative;
+}
+
+main{
+    background-color: #e9e5f8;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+
+
+/** Formulario agregar Producto **/
+
+.titulo-productos{
+    color: var(--crl-main);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.formulario-producto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.formulario-producto input {
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+    min-width: 120px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.boton-cargar {
+    padding: 14px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.boton-cargar:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* buscar producto */
+
+.boton-buscar{
+    padding: 14px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #2c6cce;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.boton-buscar:hover{
+    background-color: #4f82ce;
+}
